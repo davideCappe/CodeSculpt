@@ -1,8 +1,4 @@
-﻿using System;
-using System.Threading;
-using System.Threading.Tasks;
-
-namespace CodeSculpt.Extensions;
+﻿namespace CodeSculpt.Extensions;
 /// <summary>
 /// Contains extension methods for the <see cref="Task"/> type.
 /// </summary>
