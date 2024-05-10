@@ -18,6 +18,7 @@
       <RepositoryBranch>master</RepositoryBranch>
       <PackageReadmeFile>README.md</PackageReadmeFile>
       <GenerateErrorForMissingTargetingPacks>false</GenerateErrorForMissingTargetingPacks>
+      <EnableWindowsTargeting>true</EnableWindowsTargeting>
   </PropertyGroup>
 
     <ItemGroup>

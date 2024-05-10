@@ -1,4 +1,4 @@
-name: Publish CodeSculpt on NuGet
+name: Publish CodeSculpt.Wpf on NuGet
 
 on:
   push:
