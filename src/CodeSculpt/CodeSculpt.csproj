@@ -4,21 +4,21 @@
     <TargetFrameworks>netstandard2.0;net6.0;net7.0;net8.0</TargetFrameworks>
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
-      <ImplicitUsings>enable</ImplicitUsings>
-      <DocumentationFile>CodeSculpt.xml</DocumentationFile>
-      <Authors>Davide Cappellari</Authors>
-      <Company>Davide Cappellari</Company>
-      <Product>CodeSculpt library</Product>
-      <Title>Tiny .NET Helpers</Title>
-      <Description>A collection of helper methods and classes.</Description>
-      <PackageLicenseExpression>MIT</PackageLicenseExpression>
-      <PackageProjectUrl>https://github.com/davideCappe/CodeSculpt</PackageProjectUrl>
-      <PackageIcon>Toolbox.png</PackageIcon>
-      <PackageTags>csharp visual-studio net netcore netstandard desktop web mobile utilities helpers</PackageTags>
-      <RepositoryType>git</RepositoryType>
-      <RepositoryUrl>https://github.com/davideCappe/CodeSculpt.git</RepositoryUrl>
-      <RepositoryBranch>master</RepositoryBranch>
-      <PackageReadmeFile>README.md</PackageReadmeFile>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <DocumentationFile>CodeSculpt.xml</DocumentationFile>
+    <Authors>Davide Cappellari</Authors>
+    <Company>Davide Cappellari</Company>
+    <Product>CodeSculpt library</Product>
+    <Title>CodeSculpt library</Title>
+    <Description>A collection of helper methods and classes.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/davideCappe/CodeSculpt</PackageProjectUrl>
+    <PackageIcon>Toolbox.png</PackageIcon>
+    <PackageTags>csharp visual-studio net netcore netstandard desktop web mobile utilities helpers</PackageTags>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/davideCappe/CodeSculpt.git</RepositoryUrl>
+    <RepositoryBranch>master</RepositoryBranch>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
     <ItemGroup>
