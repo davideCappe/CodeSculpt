@@ -24,6 +24,6 @@ The library is available on [NuGet](https://www.nuget.org/packages/CodeSculpt). 
 
 **Installation**
 
-The library is available on [NuGet](https://www.nuget.org/packages/CodeSculpt.Wpf). Just search *CodeSculpt* in the **Package Manager GUI** or run the following command in the **Package Manager Console**:
+The library is available on [NuGet](https://www.nuget.org/packages/CodeSculpt.Wpf). Just search *CodeSculpt.Wpf* in the **Package Manager GUI** or run the following command in the **Package Manager Console**:
 
     Install-Package CodeSculpt.Wpf
