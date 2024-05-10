@@ -1,14 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
+﻿using System.ComponentModel.DataAnnotations;
 using System.Reflection;
 using System.Resources;
 using CodeSculpt.Models;
 
 namespace CodeSculpt.Extensions;
+/// <summary>
+/// Contains extension methods for the <see cref="Enum"/> type.
+/// </summary>
+/// <seealso cref="Enum"/>
 public static class EnumExtensions
 {
+    /// <summary>
+    /// Gets the description of the provided enum value. The description is retrieved from the <see cref="DisplayAttribute"/>, if present, and supports localization.
+    /// </summary>
+    /// <param name="enum">The enum for which to get the description.</param>
+    /// <returns>The description of the enum.</returns>
+    /// <seealso cref="DisplayAttribute"/>
+    /// <seealso cref="Enum"/>
     public static string GetDescription(this Enum @enum)
     {
         var descriptions = new List<string?>();
@@ -32,6 +40,12 @@ public static class EnumExtensions
         return @enum.ToString();
     }
 
+    /// <summary>
+    /// Provides an <see cref="IEnumerable{T}"/> that represents each flag enum values.
+    /// </summary>
+    /// <param name="enum">The enum to get values.</param>
+    /// <returns>The <see cref="IEnumerable{T}"/> that represents each flag enum values.</returns>
+    /// <seealso cref="Enum"/>
     public static IEnumerable<T> GetFlags<T>(this T @enum) where T : Enum
     {
         var values = Enum.GetValues(@enum.GetType()).Cast<T>();
@@ -55,7 +69,7 @@ public static class EnumExtensions
 
         if (bits != 0L)
         {
-            return Enumerable.Empty<T>();
+            return [];
         }
 
         if (Convert.ToInt64(@enum) != 0L)
@@ -68,11 +82,28 @@ public static class EnumExtensions
             return values.Take(1);
         }
 
-        return Enumerable.Empty<T>();
+        return [];
     }
 
+    /// <summary>
+    /// Gets the descriptions of all values of the provided enum type. Each description is retrieved from the <see cref="DisplayAttribute"/>, if present, and supports localization.
+    /// </summary>
+    /// <typeparam name="T">The enum type for which to get the descriptions.</typeparam>
+    /// <returns>A dictionary containing the descriptions of each enum value.</returns>
+    /// <seealso cref="DisplayAttribute"/>
+    /// <exception cref="ArgumentException">The provided type is not an enum.</exception>
+    /// <seealso cref="GetDescription(Enum)"/>
+    /// <seealso cref="GetDescriptions(Type)"/>
+    /// <seealso cref="DisplayAttribute"/>
+    /// <seealso cref="Enum"/>
     public static Dictionary<int, string?> GetDescriptions<T>() where T : Enum
         => GetDescriptions(typeof(T));
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="enumType"></param>
+    /// <returns></returns>
     public static Dictionary<int, string?> GetDescriptions(this Type enumType)
     {
         var descriptions = new Dictionary<int, string?>();
@@ -89,6 +120,12 @@ public static class EnumExtensions
         return descriptions;
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="fieldInfo"></param>
+    /// <param name="defaultValue"></param>
+    /// <returns></returns>
     private static string? GetFieldInfoDescription(FieldInfo fieldInfo, string? defaultValue)
     {
         string? enumDescription;
@@ -107,6 +144,12 @@ public static class EnumExtensions
         return enumDescription ?? defaultValue;
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <typeparam name="TSource"></typeparam>
+    /// <param name="source"></param>
+    /// <returns></returns>
     public static IEnumerable<WithIndex<TSource>> WithIndex<TSource>(this IEnumerable<TSource> source) where TSource : class
         => source.Select((item, index) => new WithIndex<TSource>(item, index));
 }
