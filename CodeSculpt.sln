@@ -5,12 +5,14 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeSculpt", "src\CodeSculpt\CodeSculpt.csproj", "{9C5C08A4-2A51-47E9-A75F-8A2706A44590}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeSculpt.Sample", "samples\CodeSculpt.Sample\CodeSculpt.Sample.csproj", "{BFC196DB-D41F-49C9-898D-13F0332078E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeSculpt.Sample", "samples\CodeSculpt.Sample\CodeSculpt.Sample.csproj", "{BFC196DB-D41F-49C9-898D-13F0332078E7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D6FA0091-C0D4-457D-8A4C-22FFB7CBA16F}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{312353EA-EB37-49C5-A6AD-4B50CF325C8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BFC196DB-D41F-49C9-898D-13F0332078E7} = {312353EA-EB37-49C5-A6AD-4B50CF325C8A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7BA0119B-B244-47D4-9075-F7D7D5D8E7CE}
